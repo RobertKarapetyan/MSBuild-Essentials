@@ -1,0 +1,10 @@
+<Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+
+    <Target Name="AbsolutePaths" >
+        <ConvertToAbsolutePath Paths="SomeFolder">
+            <Output TaskParameter="AbsolutePaths" PropertyName="absPath"/>
+        </ConvertToAbsolutePath>
+        <Message text="$(absPath)" />
+    </Target>
+
+</Project>  

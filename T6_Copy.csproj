@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+    <ItemGroup>  
+        <MySourceFiles Include="SomeFiles/a.cs;SomeFiles/b.cs;SomeFiles/c.cs"/>  
+    </ItemGroup>  
+
+    <Target Name="CopyFiles">  
+        <Copy  
+            SourceFiles="@(MySourceFiles)"  
+            DestinationFolder="SomeFolder/Destination"  
+        />  
+    </Target>  
+</Project> 

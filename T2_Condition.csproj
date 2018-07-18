@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+    <Target Name="DisplayMessages">  
+        <!-- Evaluates to true if strings are equal -->
+        <Message Text="Project File Name = $(MSBuildProjectFile)" 
+            Condition="'StringA'=='StringA'"/>  
+
+        <!-- Evaluates to true if a file or folder exists. -->
+        <Message Text="Project Extension = $(MSBuildProjectExtension)" 
+            Condition="Exists('SomeFolder/SomeFile.csproj')"/>  
+    </Target>  
+</Project>  

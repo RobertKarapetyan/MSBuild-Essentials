@@ -1,0 +1,16 @@
+<Project DefaultTargets="FakeBuild"  
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+
+    <ItemGroup>  
+        <Files Include="*.obj"/>  
+    </ItemGroup>  
+
+    <Target Name="Clean">  
+        <Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>  
+    </Target>  
+
+    <Target Name="FakeBuild" DependsOnTargets="Clean">  
+        <Message Text="Building after cleaning..."/>  
+    </Target>  
+    
+</Project>  

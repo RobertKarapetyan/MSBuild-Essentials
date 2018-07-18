@@ -1,0 +1,12 @@
+<Project DefaultTargets="CallOtherTargets"  
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+
+    <Target Name="CallOtherTargets">  
+        <CallTarget Targets="TargetA"/>  
+    </Target>  
+
+    <Target Name="TargetA">  
+        <Message Text="Building TargetA..." />  
+    </Target>  
+
+</Project>  
